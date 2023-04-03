@@ -1,0 +1,135 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", "sans-serif";
+}
+
+.wrapper {
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(26deg, rgba(138, 146, 148, 1) 0%, rgba(66, 126, 235, 1) 100%);
+    overflow-x: hidden;
+    position: relative;
+}
+
+.player-btn {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) translateY(3rem);
+    width: 70%;
+    max-width: 250px;
+    padding: 0.5rem 3rem;
+    background-color: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.28);
+    border-radius: 1rem;
+    color: white;
+    text-align: center;
+}
+
+.player-btn.done {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: green;
+    font-weight: bold;
+}
+
+.box-container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: 90%;
+    max-width: 20rem;
+    aspect-ratio: 1/1;
+    background-color: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.28);
+    border-radius: 1rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    padding: 1rem;
+    backdrop-filter: blur(7px);
+}
+
+.box {
+    width: 100%;
+    cursor: pointer;
+    font-size: 3rem;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid rgba(255, 255, 255, 0.75);
+}
+
+.box1,
+.box2,
+.box3 {
+    border-top: none;
+}
+
+.box7,
+.box8,
+.box9 {
+    border-bottom: none;
+}
+
+.box1,
+.box4,
+.box7 {
+    border-left: none;
+}
+
+.box3,
+.box6,
+.box9 {
+    border-right: none;
+}
+
+.box1 {
+    border-top-left-radius: 1rem;
+}
+
+.box3 {
+    border-top-right-radius: 1rem;
+}
+
+.box7 {
+    border-bottom-left-radius: 1rem;
+}
+
+.box9 {
+    border-bottom-right-radius: 1rem;
+}
+
+.new-game-btn {
+    position: absolute;
+    left: 50%;
+    bottom: 3rem;
+    transform: translateX(-50%);
+    width: 70%;
+    max-width: 250px;
+    padding: 0.5rem 3rem;
+    background-color: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.28);
+    border-radius: 1rem;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+}
+
+.new-game-btn.on {
+    background-color: rgba(255, 255, 255, 0.7);
+    color: green;
+    font-weight: 600;
+}
+
+.new-game-btn:active {
+    scale: 0.98;
+}
+
+.win {
+    background-color: rgba(0, 255, 0, 0.3);
+}
